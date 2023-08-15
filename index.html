@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui and tailwind css link-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui and tailwind css link-->
+
+    <!-- font awesome link is here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome link is here -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Fira Code", sans-serif;
+        }
+    </style>
+    <title>Text editor for edit text</title>
+</head>
+<body class="bg-slate-200">
+    
+
+    <section class= " lg:w-4/5 w-full mx-auto">
+
+        <!-- editor features sections is here -->
+        <div id="button-area" class="py-10 flex justify-between sm:gap-0 gap-5 sm:flex-nowrap flex-wrap items-center">
+            <div class="flex gap-3">
+                <button  class="btn font-extrabold text-xl p-0"><i id="bold-btn" class="fa-solid fa-bold px-4"></i></button>
+                <button class="btn font-extrabold text-xl p-0"><i id="italic-btn" class="fa-solid fa-italic px-4"></i></button>
+                <button class="btn font-extrabold text-xl p-0"><i id="underline-btn" class="fa-solid fa-underline px-4"></i></button>
+            </div>
+
+            <div class="flex gap-3">
+                <button class="btn p-0"><i id="left-align" class="fa-solid fa-align-left text-xl px-4"></i></button>
+                <button class="btn p-0"><i id="right-align" class="fa-solid fa-align-right text-xl px-4"></i></button>
+                <button class="btn p-0"><i id="center-align" class="fa-solid fa-align-center text-xl px-4"></i></button>
+            </div>
+
+            <div id="input-area" class="flex gap-3">
+                <input class="p-2" type="number" value="16" min="0" max="200" name="" id="font-size">
+                <div>
+                    <label  for="text-color">Choose color:</label>
+                    <input id="color-choosed" type="color" name="text-color" id="">
+                </div>
+            </div>
+        </div>
+        <!-- editor features sections is here -->
+
+
+        <!-- page section is here -->
+        <div  class="bg-white shadow-2xl min-h-screen">
+            <textarea  name="" class="w-full h-full bg-white outline-none p-12 rounded-lg " id="text-page" cols="50" rows="50"></textarea>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
